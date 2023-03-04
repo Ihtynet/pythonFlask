@@ -3,15 +3,34 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    #render_template("index.html")
-    fi = open("templates/index.html","r",encoding="utf-8")
-    return fi.read()
+    menu = {
+        'home': '<a href="/">Главная</a>',
+        'catalog': '<a href="/catalog">Каталог</a>',
+        'help': '<a href="/help">Помощь</a>',
+             }
+    title = "Главная страница магазина"
 
+    return render_template("index.html", menu=menu, title= title)
+
+@app.route('/catalog/')
+def catalog():
+   menu = {
+        'home': '<a href="/">Главная</a>',
+        'catalog': '<a href="/catalog">Каталог</a>',
+        'help': '<a href="/help">Помощь</a>',
+             }
+   title = "Каталог товаров"
+   return render_template("index.html", menu=menu, title= title)
 
 @app.route('/help/')
 def help():
-    txt = render_template("helpfile.html")
-    return txt
+   menu = {
+        'home': '<a href="/">Главная</a>',
+        'catalog': '<a href="/catalog">Каталог</a>',
+        'help': '<a href="/help">Помощь</a>',
+             }
+   title = "Помощь"
+   return render_template("index.html", menu=menu, title= title)
 
 if __name__ == '__main__':
     app.run()

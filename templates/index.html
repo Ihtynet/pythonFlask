@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Каталог товаров</title>
+    <title>{{title}}</title>
 </head>
 <body>
 <table>
     <tr>
-        <td><a href="/">Главная</a></td>
-        <td><a href="/catalog">Каталог</a></td>
-        <td><a href="/help">Помощь</a></td>
+        <td>{{menu.home|safe}}</td>
+        <td>{{menu.catalog|safe}}</td>
+        <td>{{menu.help|safe}}</td>
     </tr>
 </table>
 </body>
