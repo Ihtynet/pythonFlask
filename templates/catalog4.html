@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Базовый заголовок</title>
+    {% endif %}
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    {% include 'cat.html' %}
+  </body>
+</html>

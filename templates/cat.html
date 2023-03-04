@@ -1,0 +1,14 @@
+    <table border="1">
+        <tr>
+            <td>НАИМЕНОВАНИЕ</td>
+            <td>ЦЕНА</td>
+            <td>КОЛ-ВО НА СКЛАДЕ</td>
+        </tr>
+      {% for cat in cat_list %}
+        <tr>
+            <td>{{cat.name}}</td>
+            <td>{{cat.price}}</td>
+            <td>{{cat.kolsklad}}</td>
+        </tr>
+      {% endfor %}
+    </table>
