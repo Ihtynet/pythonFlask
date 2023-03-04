@@ -1,3 +1,7 @@
+"""
+Урок 2
+Используем файлы шаблонов
+ """
 from flask import Flask, render_template,request
 app = Flask(__name__)
 
