@@ -2,7 +2,7 @@ from flask import Flask, render_template,request
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
+def startpage():
     menu = {
         'home': '<a href="/">Главная</a>',
         'catalog': '<a href="/catalog">Каталог</a>',
