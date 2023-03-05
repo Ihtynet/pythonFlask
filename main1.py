@@ -2,7 +2,7 @@
 Урок 1
 Создаем базовый набор для работы страницы
  """
-from flask import Flask, render_template,request
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
